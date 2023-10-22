@@ -1,0 +1,159 @@
+body {
+    background-color: #FFFFFF;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.15;
+    margin: 0;
+    text-align: center;
+}
+
+/* Focus */
+
+:focus {
+    border: 3px solid #566246;
+}
+
+/* Skip to content */
+
+.skip a {
+    background: #FFFFFF;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    text-decoration: none;
+}
+
+.skip a:focus {
+    top: 0px;
+}
+
+/* Navigation bar */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #A8CCC9;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #1F2232;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color:#566246;
+    border-bottom: 5px solid #566246;
+}
+
+.active {
+    background-color: #FFFFFF;
+    border: 10px solid #FFFFFF;
+}
+
+.active a {
+    color: #566246;
+}
+
+/* h1 */
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 50px 0;
+}
+
+/* Grid */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.container div {
+    grid-column: 1 / -1;
+    margin: 0 20px;
+    border: 5px solid #A8CCC9;
+}
+
+h2 {
+    background-color: #A8CCC9;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 20px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px 0 20px 0;
+}
+
+div ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+div ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+div li {
+    line-height: 2;
+    text-align: left;
+    padding: 0 50px;
+}
+
+p {
+    padding: 0px 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+h2 + p {
+    margin-top: 20px;
+    padding: 0 50px;
+}
+
+.container img {
+    width: 80%;
+    margin: 20px;
+    padding: 7px;
+    background-color: #A8CCC9;
+    box-shadow: 8px 8px #566246;
+}
+
+.container figcaption {
+    margin: 0 20px;
+    line-height: 2;
+}
+
+.container :last-child {
+    margin-bottom: 20px;
+}
+
+/* Prefers reduced motion */
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .skip a {
+        -webkit-transition: none; /* sets to default setting */
+        transition: none;        /* sets to default setting */
+    }
+
+    .gif {
+        display: none;
+    }
+}
